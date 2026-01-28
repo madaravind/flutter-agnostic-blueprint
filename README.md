@@ -28,17 +28,22 @@ Strict separation between the **View** (Pixels), **ViewModel** (Logic), and **Mo
 ```text
 lib/
 ├── app/
-│   ├── config/      # Global State & Environment Config
-│   ├── di/          # The AppInjector (Dependency Management)
-│   └── network/     # Generic Dio Service & ApiResult
-├── core/            # Base Classes & Interfaces (The Contracts)
-├── features/        # Feature-first modules (Login, Profile, etc.)
+│   ├── config/          # Environment Setup & Global Config
+│   └── di/              # AppInjector (Centralized Dependency Injection)
+├── features/            # Scalable Feature-First Modules
 │   └── login/
-│       ├── api/     # Feature-specific endpoints
-│       ├── model/   # Data models & states
-│       ├── viewmodel/# Interface-based controllers
-│       └── views/   # State-agnostic UI
-└── utils/           # Global constants & string helpers
+│       ├── api/         # Remote Data Sources & Endpoints
+│       ├── model/       # Data Entities & Response Models
+│       ├── validation/  # Business Logic & Form Validation
+│       ├── view/        # Clean UI (Independent of State Framework)
+│       └── viewmodel/   # Abstract State Logic & Interface Contracts
+├── service/             # Core Engine: Dio Networking & ApiResult Wrappers
+├── state_impl/          # The Agnostic Layer (Interchangeable State Engines)
+│   ├── bloc/            # BLoC implementation of Feature Interfaces
+│   ├── getx/            # GetX implementation of Feature Interfaces
+│   ├── provider/        # Provider implementation of Feature Interfaces
+│   └── riverpod/        # Riverpod implementation of Feature Interfaces
+└── utils/               # Atomic Helpers, Constants & Extensions
 ```
 
 # How to Use
