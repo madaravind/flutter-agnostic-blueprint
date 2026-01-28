@@ -116,8 +116,6 @@ With deep expertise in **Clean Architecture** and **SOLID principles**, Aravind 
 
 **Developed by Aravind** *Senior Flutter Engineer & Mobile Architect*
 
----
-
 ## 📜 License & Terms
 **Proprietary Commercial License** Copyright (c) 2026 Aravind. All Rights Reserved.
 + Use for commercial projects is permitted only with a valid purchase.
