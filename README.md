@@ -44,16 +44,6 @@ At the heart of this architecture lies the **Agnostic Async Registry & Infrastru
 
 ---
 
-## 🚫 When NOT to Use AARIK
-
-AARIK may not be the best choice if:
-- You are building a very small MVP or demo app
-- The app lifecycle is short-lived
-- The team is unfamiliar with architectural patterns and DI
-- Rapid prototyping is more important than long-term maintainability
-
----
-
 ## 🔄 Comparison Example: Switching State Management
 
 ### Traditional Approach
@@ -156,6 +146,18 @@ The UI interacts only with the Contract, never the specific library:
 final controller = LoginInjector.instance.getController();
 Text(controller.name); // Works regardless of GetX or BLoC
 ```
+
+---
+
+## 🚫 When NOT to Use AARIK
+
+AARIK may not be the best choice if:
+- You are building a very small MVP or demo app
+- The app lifecycle is short-lived
+- The team is unfamiliar with architectural patterns and DI
+- Rapid prototyping is more important than long-term maintainability
+
+---
 
 # About the Creator
 **Aravind** is a **Senior Flutter Engineer** and **Mobile Architect** with a focus on building **enterprise-grade mobile ecosystems**. He specializes in transforming complex business requirements into **scalable, testable, and maintainable** software architectures.
