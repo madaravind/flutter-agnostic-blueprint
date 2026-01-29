@@ -23,6 +23,27 @@ At the heart of this architecture lies the **Agnostic Async Registry & Infrastru
 * **Kernel (The Foundation):** The core rules that make switching state management (BLoC/GetX/Riverpod) effortless.
 ---
 
+## 📊 Benchmark Comparison (High Level)
+
+| Feature / Architecture | **AARIK** | **Clean Architecture + BLoC** | **Clean Architecture + Riverpod** | **GetX (Direct Usage)** |
+|------------------------|-----------|-------------------------------|----------------------------------|--------------------------|
+| State-agnostic design | ✅ Built-in | ❌ BLoC-locked | ❌ Riverpod-locked | ❌ GetX-locked |
+| UI decoupled from state | ✅ Fully | ⚠️ Partial | ⚠️ Partial | ❌ Tight coupling |
+| Global + screen state | ✅ Native support | ⚠️ Manual handling | ⚠️ Manual handling | ⚠️ Manual handling |
+| Background task safety | ✅ Built-in | ❌ Manual setup | ❌ Manual setup | ❌ Manual setup |
+| Migration cost (state change) | 🔥 Very low | High | High | Very high |
+| Testability | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ |
+| Boilerplate | Medium | High | Medium | Low |
+| Learning curve | High (architectural) | High | Medium | Low |
+| Long-term scalability | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ |
+| Enterprise readiness | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
+
+> **Summary:**  
+> AARIK prioritizes *long-term scalability, flexibility, and maintainability* over short-term development speed.  
+> It is designed for teams that want to avoid state-management lock-in and architectural rewrites as applications grow.
+
+---
+
 ## 🚀 Key Features
 
 ### 1. Multi-State Engine (Agnostic Design)
